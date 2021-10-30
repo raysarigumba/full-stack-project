@@ -24,7 +24,7 @@ class CreateCourseView(CreateView):
 class StudentApiView(View):
     def get(self, *args, **kwargs):
         course_id = kwargs.get('course_id')
-        course = Course.object.get(id=course_id)
+        course = Course.objects.get(id=course_id)
         context = {'course': course, 'students': course.student_set.all()}
         return render(self.request, 'courses/student_list.html', context)
 

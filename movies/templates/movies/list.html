@@ -53,7 +53,7 @@
     </div>
     <ul class="list-group">
         {% for movie in movies %}
-            <li class="list-group-item">
+            <li class="list-group-item list-group-flush">
                 <a href="{% url 'movies_detail' movie.id %}"> {{ movie }} </a>
             </li>
         {% endfor %}
